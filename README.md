@@ -22,7 +22,7 @@ This project demonstrates how to implement directory-based routing in a React ap
 1. Install Vite & dependencies:
    ```bash
    bun create vite@latest
-   npm install react-router-dom vite-plugin-pages
+   bun install react-router-dom vite-plugin-pages
    ```
 
 2. Configure vite.config.js:
