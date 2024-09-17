@@ -10,8 +10,9 @@ This project demonstrates how to implement directory-based routing in a React ap
 
 ## Setup
 
-1. Install dependencies:
+1. Install Vite & dependencies:
    ```bash
+   bun create vite@latest
    npm install react-router-dom vite-plugin-pages
    ```
 
@@ -51,6 +52,54 @@ This project demonstrates how to implement directory-based routing in a React ap
     export default App;
    ```
 
+4. Add navigation component, with active states in src/components/navigation.tsx:
+   ```jsx
+   import { NavLink } from "react-router-dom";
+
+   export default function Navigation() {
+       return (
+           <nav>
+               <ul className="flex space-x-4">
+                   <li>
+                       <NavLink to="/" className={({ isActive }) => (isActive ? "text-blue-500" : "hover:text-gray-300")}>
+                           Home
+                       </NavLink>
+                   </li>
+                   <li>
+                       <NavLink
+                           to="/about"
+                           className={({ isActive }) => (isActive ? "text-blue-500" : "hover:text-gray-300")}
+                       >
+                           About
+                       </NavLink>
+                   </li>
+                   <li>
+                       <NavLink
+                           to="/contact"
+                           className={({ isActive }) => (isActive ? "text-blue-500" : "hover:text-gray-300")}
+                       >
+                           Contact
+                       </NavLink>
+                   </li>
+                   <li>
+                       <NavLink
+                           to="/blog"
+                           className={({ isActive }) => (isActive ? "text-blue-500" : "hover:text-gray-300")}
+                       >
+                           Blog
+                       </NavLink>
+                   </li>
+               </ul>
+           </nav>
+       );
+   }
+   ```
+
+5. Features to add
+   - [ ] Nested layout.tsx - Like NextJS
+   - [ ] Loading data (react-router-dom Loader)
+
+
 ## Directory Structure
 
 ```
@@ -63,8 +112,9 @@ src/
 │   │   └── index.tsx
 │   ├── contact/
 │   │   └── index.tsx
-│   └── index.tsx
+│   └── index.tsx (Home Page)
 ├── components/
-│   └── Layout.tsx
+│   └── layout.tsx
+│   └── navigation.tsx
 └── main.tsx
 ```
