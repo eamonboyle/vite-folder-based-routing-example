@@ -26,3 +26,5 @@ dist-ssr
 # Vite build
 tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo   
+
+bun.lockb
