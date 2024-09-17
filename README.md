@@ -2,6 +2,15 @@
 
 This project demonstrates how to implement directory-based routing in a React application using react-router-dom and vite-plugin-pages.
 
+## Tech stack
+- React: A JavaScript library for building user interfaces
+- [react-router-dom](https://reactrouter.com/en/main): Declarative routing for React applications
+- Vite: Next-generation frontend tooling
+- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages): File system based routing for Vite
+- Tailwind CSS: A utility-first CSS framework for rapid UI development
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript
+
+
 ## Features
 
 - Automatic route generation based on file structure
